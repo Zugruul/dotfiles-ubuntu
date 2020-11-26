@@ -12,6 +12,9 @@ call plug#begin('~/.dotfiles/nvim/plugged')
 	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 	Plug 'junegunn/fzf.vim'
 	" Plug 'ctrlpvim/ctrlp.vim' " fuzzy find files
+	Plug 'nvim-lua/popup.nvim'
+	Plug 'nvim-lua/plenary.nvim'
+	Plug 'nvim-telescope/telescope.nvim'
 
 	Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 	Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -99,6 +102,14 @@ let NERDTreeGitStatusWithFlags = 1
 
 " Tab navigation like Firefox.
 nnoremap <C-t> :tabnew<CR>
+
+" Using lua functions
+nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
+nnoremap <leader>fr <cmd>lua require('telescope.builtin').git_files()<cr>
+nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
+nnoremap <leader>fo <cmd>lua require('telescope.builtin').oldfiles()<cr>
+nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
+nnoremap <leader>fh <cmd>lua require('telescope.builtin').command_history()<cr>
 
 " fzf config
 map <leader>e :Buffers<CR>
