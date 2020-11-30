@@ -1,8 +1,5 @@
-brew install --HEAD nvim
-brew install the_silver_searcher ripgrep fd bat
-brew upgrade git
-brew tap homebrew/cask-fonts
-brew cask install font-hack-nerd-font
+sudo apt-get install neovim python3-neovim
+sudo apt-get install the_silver_searcher ripgrep bat fd-find
 
 #!/bin/bash
 rm -rf ~/.zshrc
