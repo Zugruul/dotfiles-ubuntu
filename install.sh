@@ -1,5 +1,5 @@
 sudo apt-get install neovim python3-neovim
-sudo apt-get install the_silver_searcher ripgrep bat fd-find
+sudo apt-get install silversearcher-ag ripgrep bat fd-find  
 
 #!/bin/bash
 rm -rf ~/.zshrc
