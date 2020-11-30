@@ -1,6 +1,10 @@
 sudo apt-get install neovim python3-neovim
 sudo apt-get install silversearcher-ag ripgrep bat fd-find  
 
+# Neovim Plug
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+
 #!/bin/bash
 rm -rf ~/.zshrc
 rm -rf ~/.tmux.conf
